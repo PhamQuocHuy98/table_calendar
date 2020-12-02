@@ -552,9 +552,7 @@ class _TableCalendarState extends State<TableCalendar>
 
   Widget _buildTable() {
     final daysInWeek = 7;
-    final children = <TableRow>[
-      if (widget.calendarStyle.renderDaysOfWeek) _buildDaysOfWeek(),
-    ];
+    final children = <TableRow>[];
 
     int x = 0;
     while (x < widget.calendarController._visibleDays.value.length) {
@@ -564,6 +562,11 @@ class _TableCalendarState extends State<TableCalendar>
           .toList()));
       x += daysInWeek;
     }
+
+    if (widget.calendarStyle.renderDaysOfWeek)
+      children.add(
+        _buildDaysOfWeek(),
+      );
 
     return Table(
       // Makes this Table fill its parent horizontally
