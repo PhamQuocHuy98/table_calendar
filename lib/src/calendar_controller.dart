@@ -31,6 +31,10 @@ class CalendarController {
   /// Currently selected day.
   DateTime get selectedDay => _selectedDay;
 
+  DateTime get firstDay => _previousFirstDay;
+
+  DateTime get lastDay => _previousLastDay;
+
   /// Currently visible calendar format.
   CalendarFormat get calendarFormat => _calendarFormat.value;
 
