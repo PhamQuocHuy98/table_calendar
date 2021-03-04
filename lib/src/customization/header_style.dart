@@ -58,7 +58,7 @@ class HeaderStyle {
 
   /// Icon used for left chevron.
   /// Defaults to `Icons.chevron_left`.
-  final Icon leftChevronIcon;
+  final Icon leftChevronIcon; 
 
   /// Icon used for right chevron.
   /// Defaults to `Icons.chevron_right`.
